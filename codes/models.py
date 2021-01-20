@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import CustomUser 
+import random
 # Create your models here.
 class Code(models.Model):
 	number= models.CharField(max_length=5)
@@ -7,7 +8,7 @@ class Code(models.Model):
 	def __str__(self):
 		return str(self.number)
 
-	def save(self.*args,**kwargs):
+	def save(self,*args,**kwargs):
 		number_list=[x for x in range(10)]
 		code_item=[]
 
